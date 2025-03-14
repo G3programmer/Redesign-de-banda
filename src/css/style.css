@@ -1,0 +1,98 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    padding: 0px 50px 0px 20px;
+    border: 20px solid transparent;
+    border-image: url(../img/Teste\ de\ moldura.png) 30 round;
+}
+
+/* Adicione uma camada escura sobre o fundo */
+.cabecalho::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/rocha.jpg);
+    background-size: cover;
+    filter: brightness(30%);
+    /* Escurece a imagem para 40% do brilho original */
+    z-index: -1;
+}
+
+.cabecalho ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.cabecalho ul a {
+    text-decoration: none;
+    color: yellow;
+    text-shadow: 0 0 40px rgb(255, 255, 60);
+    font-family: 'Norse', sans-serif;
+    font-weight: bold;
+    font-size: 1.45em;
+}
+
+.home {
+    display: flex;
+    flex: 20 1 500px;
+    justify-content:center ;
+    flex-wrap: wrap;
+    overflow: auto;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    background: url(../img/wallpaper\ 1.webp);
+    background-size: cover;
+    position: relative; /* Adicionado */
+    min-height: 110vh; /* Adicionado */
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/rocha.jpg);
+    background-size: cover;
+    filter: brightness(40%);
+    z-index: -1;
+    pointer-events: none; /* Adicionado */
+}
+
+.home::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.752) 30%, transparent 100%);
+}
+
+.home .area-texto {
+    display: grid;
+    align-items: end;
+    text-align: center;
+    z-index: 100;
+}
+
+.home .area-texto .titulo {
+    margin-top: 30pc;
+    width: 35pc;
+}
+
+.home .area-texto .texto {
+    font-size:xx-large;
+    color: yellow;
+    text-shadow: 0 0 40px rgb(255, 255, 60);
+    font-family: 'Norse', sans-serif;
+}

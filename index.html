@@ -6,24 +6,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="src/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href="https://fonts.cdnfonts.com/css/norse" rel="stylesheet">
     <title>Wind Rose (Redesign)</title>
 </head>
 
 <body>
-    <header>
+    <header class="cabecalho">
+        
         <div class="logo">
-            <img src="src/img/title.jpeg" alt="Wind Rose" class="imagem">
+            <a href="#">
+                <img src="src/img/title-removebg-preview.png" alt="Wind Rose" class="imagem">
+            </a>
         </div>
-        <ul>
-         <li>Sobre a Banda</li>
-         <li>Álbuns</li>
-         <li>Merchandise</li>
-         <li>Contatos</li>
-        </ul>
+
+        <button id="openMenu">&#9776;</button>
+        <nav id="menu">
+            <ul>
+                <button id="closeMenu">X</button>
+                  <a href="#band">Sobre a Banda</a>
+                  <a href="#albums">Álbuns</a>
+                  <a
+                        href="https://shop.windroseofficial.com/?srsltid=AfmBOooAhwroOG2p9yeUExjDt-rXO8-QFrs4WynldNgyOlpC_pXK8k6Q">Merchandise</a>
+
+                  <a href="#contact">Contatos</a>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <!-- <img src="src/img/wallpaper 1.webp" alt=""> -->
+
+
+    <main class="home" id="home">
+        <div class="area-texto">
+           <img src="src/img/title-removebg-preview.png" alt="" class="titulo">
+            <p class="texto">Uma banda de Power metal de Itália</p>
+            <a href="#band" class="btn">Sobre a Banda</a>
+        </div>
+        <!-- 
+        <section class="banner">
+            <div class="banner-content">
+                <h1>Wind Rose</h1>
+                <p>Uma banda de Power metal de Itália</p>
+                <a href="#band" class="btn">Sobre a Banda</a>
+            </div>
+        </section> -->
+       <!--  <section class="band" id="band">
+            <div class="band-content">
+                <h2>Sobre a Banda</h2>
+                <p> Wind Rose é uma banda de power metal de Itália. A banda foi formada em 2009 e lançou seu álbum de
+                    estreia, Shadows Over Lothadruin, em 2012. O álbum foi bem recebido pela crítica e os fãs, a banda
+                    começou a ganhar seguidores em todo o mundo. Desde então, Wind Rose lançou mais dois álbuns, Wardens
+                    of the West Wind e Stonehymn, e tem tocado em festivais de metal em toda a Europa. A banda é conhecida
+                    por suas letras inspiradas em fantasia e por sua energia contagiante no palco. Se você gosta de power
+                    metal épico e cativante, não deixe de conferir Wind Rose!</p> -->
+        
     </main>
+    <footer class="rodape">
+
+    </footer>
 </body>
+<script src="src/js/index.js"></script>
 
 </html>
