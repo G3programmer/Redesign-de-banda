@@ -1,16 +1,25 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    display: flex; 
-    flex-direction: column; /* Alterado para coluna */
-    min-height: 100vh; /* Garantir altura mínima */
+html {
+    scroll-behavior: smooth;
 }
 
-#openMenu, #closeMenu{
+
+body {
+    background-color: black !important;
+    display: flex;
+    flex-direction: column;
+    /* Alterado para coluna */
+    min-height: 100vh;
+    /* Garantir altura mínima */
+}
+
+#openMenu,
+#closeMenu {
     border: none;
     background: none;
     font-size: 30px;
@@ -23,7 +32,7 @@ body{
     font-family: 'Norse', sans-serif;
 }
 
-nav{
+nav {
     width: 100%;
     align-items: center;
     justify-content: flex-end;
@@ -42,11 +51,15 @@ nav{
     footer { order: 3; }
 } */
 @media only screen and (max-width: 717px) {
-    #openMenu, #closeMenu {
-        display: block; /* Alterado de flex para block */
-        z-index: 1100; /* Garantir que fique acima de outros elementos */
+
+    #openMenu,
+    #closeMenu {
+        display: block;
+        /* Alterado de flex para block */
+        z-index: 1100;
+        /* Garantir que fique acima de outros elementos */
     }
-    
+
     #openMenu {
         margin-left: auto;
     }
@@ -61,9 +74,11 @@ nav{
         position: fixed;
         top: 0;
         left: 0;
-        height: 100vh; /* Altura total da viewport */
+        height: 100vh;
+        /* Altura total da viewport */
         width: 100vw;
-        background: rgba(0, 0, 0, 0.9); /* Fundo mais escuro para melhor contraste */
+        background: rgba(0, 0, 0, 0.9);
+        /* Fundo mais escuro para melhor contraste */
         align-items: center;
         justify-content: center;
         margin: 0;

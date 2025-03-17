@@ -29,7 +29,7 @@
 .cabecalho ul {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 70px;
 }
 
 .cabecalho ul a {
@@ -44,7 +44,7 @@
 .home {
     display: flex;
     flex: 20 1 500px;
-    justify-content:center ;
+    justify-content: center;
     flex-wrap: wrap;
     overflow: auto;
     gap: 5px;
@@ -52,8 +52,10 @@
     height: 100%;
     background: url(../img/wallpaper\ 1.webp);
     background-size: cover;
-    position: relative; /* Adicionado */
-    min-height: 110vh; /* Adicionado */
+    position: relative;
+    /* Adicionado */
+    min-height: 110vh;
+    /* Adicionado */
 }
 
 .home::before {
@@ -67,7 +69,8 @@
     background-size: cover;
     filter: brightness(40%);
     z-index: -1;
-    pointer-events: none; /* Adicionado */
+    pointer-events: none;
+    /* Adicionado */
 }
 
 .home::after {
@@ -78,21 +81,144 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.752) 30%, transparent 100%);
 }
 
+@keyframes fadeDownIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .home .area-texto {
     display: grid;
     align-items: end;
     text-align: center;
     z-index: 100;
+    margin-top: 26pc;
+    justify-content: center;
+    animation: fadeDownIn 2.4s ease-out forwards;
 }
 
 .home .area-texto .titulo {
-    margin-top: 30pc;
-    width: 35pc;
+    width: 40pc;
+    box-shadow: #000000 10 10 10px;
+    margin-left: 10pc;
+    filter:
+        drop-shadow(2px 0 0 #000000)
+        /* Vermelho escuro */
+        drop-shadow(-2px 0 0 #510000) drop-shadow(0 2px 0 #000000) drop-shadow(0 -2px 0 #390101) drop-shadow(2px 2px 0 #241d00) drop-shadow(-2px -2px 0 #000000) drop-shadow(-2px 2px 0 #000000) drop-shadow(2px -2px 0 #000000);
 }
 
 .home .area-texto .texto {
-    font-size:xx-large;
+    font-size: xx-large;
+    margin-bottom: 5pc;
     color: yellow;
+    font-weight: bold;
     text-shadow: 0 0 40px rgb(255, 255, 60);
     font-family: 'Norse', sans-serif;
+}
+
+.sessao-albuns {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 35px;
+    box-sizing: border-box;
+    border: 20px solid transparent;
+    border-image: url(../img/borda-album.png) 57 stretch;
+   /*  background-image: url(../img/lava-background.jpg!w700wp);
+    background-size: cover; */
+    position: relative;
+    overflow: auto;
+    flex: 20 1 500px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    height: 100%;
+    z-index: 1000;
+   /*  background-clip: padding-box; */
+}
+
+/* Adiciona um container interno para o conteúdo */
+.sessao-albuns-container {
+    display: flex;
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.sessao-albuns::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-image: url(../img/lava-background.jpg!w700wp);
+    background-size: cover;
+    filter: brightness(40%) sepia(50%) saturate(350%) hue-rotate(350deg); /* Aumenta tons vermelhos */;
+    z-index: -1;
+    pointer-events: none;
+    /* Adicionado */
+}
+
+.sessao-albuns::after {
+    content: "";
+    position: relative;
+    inset: 0; /* Substitui top, right, bottom, left: 0 */
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.752) 30%,
+        transparent 100%
+    );
+    pointer-events: none; /* Permite clicar nos elementos abaixo */
+    z-index: 1; /* Mantém o gradiente acima do fundo, mas abaixo do conteúdo */
+}
+
+/* Ajuste para garantir que os cartões do Bootstrap fiquem acima do gradiente */
+.sessao-albuns > * {
+    position: relative;
+    z-index: 2;
+}
+
+.sessao-albuns > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilização dos cartões */
+.sessao-albuns .card {
+    max-width: 300px; /* Define largura máxima */
+    margin: 0 auto; /* Centraliza os cartões */
+}
+
+.sessao-albuns .card-img-top {
+    max-height: 200px; /* Altura máxima para as imagens */
+    object-fit: cover; /* Mantém proporção da imagem */
+}
+
+.sessao-albuns .card-body {
+    padding: 1rem; /* Reduz o padding interno */
+}
+
+.sessao-albuns .card-title {
+    font-size: 1.1rem; /* Reduz tamanho do título */
+}
+
+.sessao-albuns .card-text {
+    font-size: 0.9rem; /* Reduz tamanho do texto */
+}
+
+/* Ajuste do grid do Bootstrap */
+.sessao-albuns .row {
+    width: 90%; /* Reduz largura total do grid */
+    margin: 0 auto; /* Centraliza o grid */
 }

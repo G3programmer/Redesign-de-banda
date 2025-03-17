@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <!--Redesign da Steam, feito em HTML, Sass e JavaScript.-->
 
 <head>
@@ -8,13 +8,15 @@
     <link rel="shortcut icon" href="src/img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="src/css/index.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.cdnfonts.com/css/norse" rel="stylesheet">
     <title>Wind Rose (Redesign)</title>
 </head>
 
 <body>
     <header class="cabecalho">
-        
+
         <div class="logo">
             <a href="#">
                 <img src="src/img/title-removebg-preview.png" alt="Wind Rose" class="imagem">
@@ -25,12 +27,12 @@
         <nav id="menu">
             <ul>
                 <button id="closeMenu">X</button>
-                  <a href="#band">Sobre a Banda</a>
-                  <a href="#albums">Álbuns</a>
-                  <a
-                        href="https://shop.windroseofficial.com/?srsltid=AfmBOooAhwroOG2p9yeUExjDt-rXO8-QFrs4WynldNgyOlpC_pXK8k6Q">Merchandise</a>
+                <a href="#band">Sobre a Banda</a>
+                <a href="#albums">Álbuns</a>
+                <a
+                    href="https://shop.windroseofficial.com/?srsltid=AfmBOooAhwroOG2p9yeUExjDt-rXO8-QFrs4WynldNgyOlpC_pXK8k6Q">Merchandise</a>
 
-                  <a href="#contact">Contatos</a>
+                <a href="#contact">Contatos</a>
             </ul>
         </nav>
     </header>
@@ -38,19 +40,69 @@
 
     <main class="home" id="home">
         <div class="area-texto">
-           <img src="src/img/title-removebg-preview.png" alt="" class="titulo">
-            <p class="texto">Uma banda de Power metal de Itália</p>
-            <a href="#band" class="btn">Sobre a Banda</a>
+            <img src="src/img/title-removebg-preview.png" alt="" class="titulo">
+            <p class="texto">Veja mais sobre a banda que utiliza temas líricos inspirados nas obras de J.R.R.Tolkien</p>
         </div>
-        <!-- 
-        <section class="banner">
-            <div class="banner-content">
-                <h1>Wind Rose</h1>
-                <p>Uma banda de Power metal de Itália</p>
-                <a href="#band" class="btn">Sobre a Banda</a>
+    </main>
+    <section class="sessao-albuns"><!-- 
+        <div class="sessao-albuns-container"> -->
+            <!-- Seu conteúdo aqui -->
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="src/img/album-shadows-over-lothadruin.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Shadows Over Lothadruin</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="src/img/album-trollslayer.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Trollslayer</h5>
+                            <p class="card-text">This is a short card.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="src/img/album-wardens-of-the-west-wind.avif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Wardens Of The West Wind</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="src/img/album-warfront.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Warfront</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="src/img/album-wintersaga.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Wintersaga</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section> -->
-       <!--  <section class="band" id="band">
+   <!--      </div> -->
+    </section>
+
+    <!--<section id="band" class="banner">
+             <section class="band" id="band">
             <div class="band-content">
                 <h2>Sobre a Banda</h2>
                 <p> Wind Rose é uma banda de power metal de Itália. A banda foi formada em 2009 e lançou seu álbum de
@@ -59,8 +111,10 @@
                     of the West Wind e Stonehymn, e tem tocado em festivais de metal em toda a Europa. A banda é conhecida
                     por suas letras inspiradas em fantasia e por sua energia contagiante no palco. Se você gosta de power
                     metal épico e cativante, não deixe de conferir Wind Rose!</p> -->
-        
-    </main>
+
+
+
+
     <footer class="rodape">
 
     </footer>
