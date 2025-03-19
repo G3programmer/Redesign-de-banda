@@ -10,6 +10,7 @@ html {
 
 
 body {
+    margin: 3px;
     background-color: black !important;
     display: flex;
     flex-direction: column;

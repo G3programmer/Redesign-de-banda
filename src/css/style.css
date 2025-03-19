@@ -38,7 +38,7 @@
     text-shadow: 0 0 40px rgb(255, 255, 60);
     font-family: 'Norse', sans-serif;
     font-weight: bold;
-    font-size: 1.45em;
+    font-size: 1.95em;
 }
 
 .home {
@@ -124,8 +124,8 @@
 
 .sessao-albuns {
     display: flex;
-    width: 100%;
-    min-height: 100vh;
+    width: auto;
+    min-height: 180vh;
     margin: 0;
     padding: 35px;
     box-sizing: border-box;
@@ -142,16 +142,22 @@
     height: 100%;
     z-index: 1000;
    /*  background-clip: padding-box; */
+   -webkit-overflow-scrolling: touch; /* Rolagem suave em dispositivos iOS */
 }
 
-/* Adiciona um container interno para o conteúdo */
-.sessao-albuns-container {
-    display: flex;
-    flex: 1;
-    position: relative;
-    width: 100%;
-    height: 100%;
+.sessao-albuns .titulo {
+    font-size: 5pc;
+    margin: 2pc;
+    color: yellow;
+    font-weight: bold;
+    text-shadow: 0 0 40px rgb(255, 255, 60);
+    font-family: 'Norse', sans-serif;
 }
+
+.sessao-albuns::-webkit-scrollbar {
+    display: none;
+}
+
 
 
 .sessao-albuns::before {
@@ -160,13 +166,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 120%;
+    height: 100%;
     background-image: url(../img/lava-background.jpg!w700wp);
     background-size: cover;
-    filter: brightness(40%) sepia(50%) saturate(350%) hue-rotate(350deg); /* Aumenta tons vermelhos */;
+    filter: brightness(34%) sepia(50%) saturate(370%) hue-rotate(350deg); /* Aumenta tons vermelhos */;
     z-index: -1;
     pointer-events: none;
-    /* Adicionado */
 }
 
 .sessao-albuns::after {
@@ -176,7 +181,7 @@
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.85) 0%,
-        rgba(0, 0, 0, 0.752) 30%,
+        rgba(0, 0, 0, 0.752) 60%,
         transparent 100%
     );
     pointer-events: none; /* Permite clicar nos elementos abaixo */
@@ -221,4 +226,120 @@
 .sessao-albuns .row {
     width: 90%; /* Reduz largura total do grid */
     margin: 0 auto; /* Centraliza o grid */
+}
+
+.sessao-band {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden; /* Alterado de auto para hidden */
+    width: 100%; /* Alterado para 100% para ocupar toda largura */
+    background: url(../img/rocha.jpg);
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem */
+    position: relative;
+    min-height: 120vh; /* Reduzido de 110vh para 80vh */
+    margin: 0; /* Remove margens */
+    padding: 20px; /* Adiciona um padding interno */
+}
+
+.sessao-band::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 205%;
+    filter: brightness(10%) sepia(50%) saturate(370%) hue-rotate(350deg); /* Aumenta tons vermelhos */;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.sessao-band {
+    display: flex;
+    flex: 20 1 500px;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    background: url(../img/rocha.jpg);
+    background-size: cover;
+    position: relative;
+    align-items: center;
+    /* Adicionado */
+    min-height: 110vh;
+    /* Adicionado */
+}
+
+.sessao-band::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    /* Adicionado */
+}
+
+.sessao-band::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.660) 50%, transparent 100%);
+    z-index: 2;
+}
+.sessao-band .membro {
+    display: flex;
+}
+
+.sessao-band .photo1/* , .photo3 */ {
+    display: flex;
+    position: relative;
+    margin: 2pc 10pc 0px 0px;
+    width: 55%;
+    max-width: 600px;
+    z-index: 3;
+}
+
+.sessao-band .photo2/* , .photo3 */ {
+    display: flex;
+    position: relative;
+    float: left;
+    margin: 7pc -30pc 2pc 40pc;
+    width: 60%;
+    max-width: 110pc;
+    z-index: 3;
+}
+
+.sessao-band .area-texto {
+    display: grid;
+    width: 42%;
+
+}
+
+.sessao-band .area-texto .titulo1 {
+    font-size: 5pc;
+    margin-left: 2pc;
+    z-index: 1000;
+    color: yellow;
+    font-weight: bold;
+    text-shadow: 0 0 40px rgb(255, 255, 60);
+    font-family: 'Norse', sans-serif;
+}
+
+.sessao-band .area-texto .texto1 {
+    font-size: 1.6pc;
+    z-index: 1000;
+    color: yellow;
+    font-weight: bold;
+    text-shadow: 0 0 40px rgb(255, 255, 60);
+    font-family: 'Norse', sans-serif;
+
 }
