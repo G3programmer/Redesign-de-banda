@@ -302,10 +302,12 @@
 .sessao-band .photo1/* , .photo3 */ {
     display: flex;
     position: relative;
-    margin: 2pc 10pc 0px 0px;
-    width: 55%;
-    max-width: 600px;
+    margin: 2pc 5pc 0px 9px;
+    width: 100%;
+    height: 28pc;
+    max-width: 700px;
     z-index: 3;
+    /* Adicionar box shadow com as cores de fogo */
 }
 
 .sessao-band .photo2/* , .photo3 */ {
@@ -341,5 +343,17 @@
     font-weight: bold;
     text-shadow: 0 0 40px rgb(255, 255, 60);
     font-family: 'Norse', sans-serif;
+    width: 100%;
+    margin: 2pc -5pc 10pc 0pc;
+}
 
+.sessao-band .area-texto .texto2 {
+    font-size: 1.6pc;
+    z-index: 1000;
+    color: yellow;
+    font-weight: bold;
+    text-shadow: 0 0 40px rgb(255, 255, 60);
+    font-family: 'Norse', sans-serif;
+    width: 80%;
+    margin: 2pc -25pc 10pc -60pc;
 }
